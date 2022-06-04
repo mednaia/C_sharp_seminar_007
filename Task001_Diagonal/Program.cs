@@ -55,5 +55,4 @@ Console.WriteLine("Your matrix: ");
 PrintMatrix(matrix);
 // Console.WriteLine("Sum of diagonal elements: ");
 // SumMiddleIndex(matrix);
-int result = SumMiddleIndex(matrix);
-Console.WriteLine($"Sum of diagonal elements of array: {result}.");
+Console.WriteLine($"Sum of diagonal elements of array: {SumMiddleIndex(matrix)}.");
