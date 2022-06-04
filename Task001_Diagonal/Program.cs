@@ -20,19 +20,29 @@ int[,] CreateMatrix(int rows, int columns, int minValue, int maxValue)
 }
 
 
-void SumMiddleIndex(int[,] matrix)
+// void SumMiddleIndex(int[,] matrix)
+// {
+//     int sum = 0;
+//     int i = 0;
+//     int j = 0;
+//     while(i<matrix.GetLength(0) && j<matrix.GetLength(1))
+//     {
+//         sum=sum+matrix[i,j];
+//         i++;
+//         j++;
+//     }
+//     Console.Write($"{sum}");
+// }  
+int SumMiddleIndex(int[,] matrix)
 {
     int sum = 0;
-    int i = 0;
-    int j = 0;
-    while(i<matrix.GetLength(0) && j<matrix.GetLength(1))
+    for (int i=0; i<matrix.GetLength(0); i++)
     {
-        sum=sum+matrix[i,j];
-        i++;
-        j++;
+        sum=sum+matrix[i,i];
     }
-    Console.Write($"{sum}");
-}    
+    return sum;
+}
+
 Console.Write("Enter amount of matrix rows and columns: ");
 int rows = int.Parse(Console.ReadLine() ?? "0");
 int columns = rows;
@@ -43,5 +53,7 @@ int finish = int.Parse(Console.ReadLine() ?? "0");
 int[,] matrix = CreateMatrix(rows,columns,start,finish);
 Console.WriteLine("Your matrix: ");
 PrintMatrix(matrix);
-Console.WriteLine("Sum of diagonal elements: ");
-SumMiddleIndex(matrix);
+// Console.WriteLine("Sum of diagonal elements: ");
+// SumMiddleIndex(matrix);
+int result = SumMiddleIndex(matrix);
+Console.WriteLine($"Sum of diagonal elements of array: {result}.");
