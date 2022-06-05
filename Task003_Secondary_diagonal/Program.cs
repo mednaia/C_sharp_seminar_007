@@ -22,8 +22,8 @@ int[,] CreateMatrix(int rows, int columns, int minValue, int maxValue)
 
 void SumSecondaryDiagonal(int[,] matrix)
 {
-    Console.WriteLine("1. The diagonal begins from columns.");
-    Console.WriteLine("2. The diagonal begins from row.");
+    Console.WriteLine("1. The diagonal begins from rows.");
+    Console.WriteLine("2. The diagonal begins from columns.");
     Console.WriteLine("Choose the startpoint of diagonal (1 or 2) and press Enter: ");
     choice = Convert.ToChar(Console.ReadLine() ?? "0");
     switch (choice)
